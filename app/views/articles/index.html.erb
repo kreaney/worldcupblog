@@ -1,9 +1,9 @@
 <h1>World Cup Blog</h1>
-
 <ul id="articles">
 	<% @articles.each do |article| %>
 		<li>
 			<%=link_to article.title, article_path(article), class: 'article_title', id:"article_#{article.id}"%>
+			(date:<%=link_to article.publishdate.strftime('%b %d %Y'), article_path(article), class: 'article_title', id:"article_#{article.id}"%>)
 		</li>
 	<% end %>
 </ul>

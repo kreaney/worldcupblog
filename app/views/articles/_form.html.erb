@@ -9,8 +9,12 @@
     <%= f.text_field :title, :required => true%>
   </p>
   <p>
-    <%= f.label :body %><br />
+    <%= f.label :body, "Thoughts" %><br />
     <%= f.text_area :body, :required => true %>
+  </p>
+    <p>
+    <%= f.label :publishdate, "Publish Date (DD/MM/YYYY)" %><br />
+    <%= f.date_field :publishdate, :required => true %>
   </p>
   <p>
     <%= f.submit %>
